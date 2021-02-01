@@ -18,4 +18,13 @@ class DeviceController extends Controller
         $device = Device::findOrFail($id);
         return view('pages.device', compact('device'));
     }
+
+    public function create() {
+        return view('pages.device-create');
+    }
+
+    public function store(Request $request) {
+        Device::create($request -> all());
+        return redirect() -> route('devices-index');
+    }
 }

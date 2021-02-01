@@ -4,7 +4,9 @@
 
   <div class="content">
 
-    <h1>HOME</h1>
+    <h1>DEVICES:</h1>
+
+    <a href="{{ route('device-create') }}">CREA NUOVO DEVICE</a>
 
     <ul>
       @foreach ($devices as $device)
