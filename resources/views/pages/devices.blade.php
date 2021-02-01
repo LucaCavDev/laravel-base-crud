@@ -9,12 +9,16 @@
     <ul>
       @foreach ($devices as $device)
     
-        <li>{{ $device -> name }}</li>
+        <li>
+          <a href="{{ route('device-show', $device -> id ) }}">
+            {{ $device -> name }}
+          </a>
+        </li>
       @endforeach
     
     </ul>
 
-
+ 
   </div>
 
 @endsection

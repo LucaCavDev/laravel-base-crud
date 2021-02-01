@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    Route::get('/devices', 'DeviceController@index') -> name('device-index');
-});
+
+Route::get('/devices', 'DeviceController@index') -> name('device-index');
+
+Route::get('/device/{id}', 'DeviceController@show') -> name('device-show');
